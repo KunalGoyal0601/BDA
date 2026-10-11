@@ -22,10 +22,13 @@ class DatasetSafetyTests(unittest.TestCase):
                     "".join(cell.get("source", []))
                     for cell in notebook["cells"] if cell.get("cell_type") == "code"
                 )
-                self.assertIn("DATA_PATH", source)
-                self.assertIn("FileNotFoundError", source)
                 if "credit_risk_dataset.csv" in source:
+                    self.assertIn("DATA_PATH", source)
+                    self.assertIn("FileNotFoundError", source)
                     self.assertIn("verify its license/terms", source)
+                else:
+                    self.assertIn("DATA_FILE", source)
+                    self.assertIn("os.path.exists", source)
                 for cell in notebook["cells"]:
                     if cell.get("cell_type") == "code":
                         self.assertIsNone(cell.get("execution_count"))
