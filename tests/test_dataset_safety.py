@@ -7,6 +7,7 @@ DATA = ROOT / "creadit_risk_fds" / "credit_risk_dataset.csv"
 NOTEBOOKS = [
     ROOT / "creadit_risk_fds" / "creadit_risk_final.ipynb",
     ROOT / "creadit_risk_fds" / "creadit_risk_final_1.0.ipynb",
+    ROOT / "data_minning" / "diabetes_health_indicators_completed_assignment.ipynb",
 ]
 
 class DatasetSafetyTests(unittest.TestCase):
@@ -23,7 +24,8 @@ class DatasetSafetyTests(unittest.TestCase):
                 )
                 self.assertIn("DATA_PATH", source)
                 self.assertIn("FileNotFoundError", source)
-                self.assertIn("verify its license/terms", source)
+                if "credit_risk_dataset.csv" in source:
+                    self.assertIn("verify its license/terms", source)
                 for cell in notebook["cells"]:
                     if cell.get("cell_type") == "code":
                         self.assertIsNone(cell.get("execution_count"))
