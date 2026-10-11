@@ -30,6 +30,15 @@ This repository is primarily a **learning archive**, not a single deployable app
 5. Keep original source datasets only when redistribution is permitted; use small documented sample data where possible.
 6. Separate polished standalone projects from class notes so your portfolio remains easy to evaluate.
 
+## Data provenance, licensing, and privacy
+
+This repository is public. Before presenting or redistributing the coursework, document the original source and license for each dataset. In particular, the file `creadit_risk_fds/credit_risk_dataset.csv` is committed alongside the credit-risk notebooks, but this README does not yet record its source or redistribution terms. The diabetes-health-indicators notebook also deserves a check of its dataset source and license.
+
+- Keep a source URL and license/terms next to each dataset when known.
+- Do not upload private or identifiable financial/medical records.
+- If a dataset's redistribution permission is unclear, remove the raw copy from the public repository and document how readers can obtain it from the original source instead.
+- Adding `.gitignore` does not remove data that has already been committed.
+
 ## Python/Jupyter basics
 
 Create an isolated environment for a subject or project rather than relying on globally installed packages. The exact dependency set may differ by notebook; record tested versions in a subject-specific `requirements.txt` when you have verified them.
