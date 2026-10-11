@@ -32,9 +32,9 @@ This repository is primarily a **learning archive**, not a single deployable app
 
 ## Data provenance, licensing, and privacy
 
-This repository is public. Before presenting or redistributing the coursework, document the original source and license for each dataset. In particular, the file `creadit_risk_fds/credit_risk_dataset.csv` is committed alongside the credit-risk notebooks, but this README does not yet record its source or redistribution terms. The diabetes-health-indicators notebook also deserves a check of its dataset source and license.
+This repository is public. Document the original source and license for every dataset before redistributing it. The `creadit_risk_fds/credit_risk_dataset.csv` file appears consistent with Kaggle's [Credit Risk Dataset by Lao Tse](https://www.kaggle.com/datasets/laotse/credit-risk-dataset), whose dataset page labels it CC0/Public Domain. Because the original download/version was not retained with provenance metadata, verify that the committed file is the same release before relying on that license attribution. If it is not the same release, replace it with a verified copy or remove it. The diabetes-health-indicators notebook still needs its exact dataset source and license recorded before the notebook or any embedded data is reused.
 
-- Keep a source URL and license/terms next to each dataset when known.
+- Keep a source URL and license/terms next to each dataset; for the credit-risk dataset, verify the source match and preserve the CC0 attribution/provenance note.
 - Do not upload private or identifiable financial/medical records.
 - If a dataset's redistribution permission is unclear, remove the raw copy from the public repository and document how readers can obtain it from the original source instead.
 - Adding `.gitignore` does not remove data that has already been committed.
