@@ -37,3 +37,6 @@ Thumbs.db
 # Build output
 build/
 dist/
+
+# Local credit-risk dataset: do not commit until source and redistribution rights are verified
+creadit_risk_fds/credit_risk_dataset.csv
